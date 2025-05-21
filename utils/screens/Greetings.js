@@ -1,13 +1,12 @@
+import React from "react";
 import { Text } from "react-native";
 
-
-
-export function Greeting({name, tafe}) { //props data runs into 2 variables using {}, an object copying 2 elements 
-    return (//declarative
-        <>
-            <Text> {name}</Text>
-            <Text>Welcome to : {tafe}</Text>
-        </>//translates into imperative using Babel
+export function Greeting(props) { //props data runs into 2 variables using {}, an object copying 2 elements 
+    return (
+        <React.Fragment>
+            <Text> {props.name}</Text>
+            <Text>Welcome to : {props.tafe}</Text>
+        </React.Fragment>
     );
 }
 
